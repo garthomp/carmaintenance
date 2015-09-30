@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Cars</h1>
+<h1>Cars</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Make</th>
@@ -20,9 +20,9 @@
         <td><%= car.model %></td>
         <td><%= car.year %></td>
         <td><%= car.mileage %></td>
-        <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', car, class: "btn btn-primary btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_car_path(car), class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Delete', car, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Car', new_car_path %>
+<%= link_to 'Add Car', new_car_path, class: "btn btn-primary btn-sm" %>
