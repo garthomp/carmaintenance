@@ -19,8 +19,8 @@
         <td><%= car.make %></td>
         <td><%= car.model %></td>
         <td><%= car.year %></td>
-        <td><%= car.mileage %></td>
-        <td><%= link_to 'Show', car, class: "btn btn-primary btn-xs" %></td>
+        <td><%= number_with_delimiter(car.mileage, delimiter: ',') %></td>
+        <td><%= link_to 'Show', car, class: "btn btn-default btn-xs" %></td>
         <td><%= link_to 'Edit', edit_car_path(car), class: "btn btn-default btn-xs" %></td>
         <td><%= link_to 'Delete', car, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
