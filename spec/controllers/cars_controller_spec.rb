@@ -24,11 +24,11 @@ RSpec.describe CarsController, type: :controller do
   # Car. As you add validations to Car, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { make: "Toyota", model: "Corolla", year: 2003, mileage: 190003 }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { make: nil, model: nil, year: nil, mileage: nil }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,7 +103,7 @@ RSpec.describe CarsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { make: "Honda", model: "Civic", year: 1999, mileage: 200000 }
       }
 
       it "updates the requested car" do
