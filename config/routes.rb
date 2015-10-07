@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :jobs
   resources :cars
 
   root 'cars#index'
